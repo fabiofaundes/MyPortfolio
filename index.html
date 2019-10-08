@@ -8,27 +8,53 @@
     <body>
         
         <div id="fullpage">
-            <div class="section">
+            <div class="section" id="capa">
                 <div class="title pacifico text-pop-up-top">
                     <h1 id="part1">Fábio</h1>
                     <h1 id="part2">Faúndes</h1>
                 </div>
                 <div class="arrow bounce"></div>
             </div>
-            <div class="section">
-                <div class="slide">Slide 2.1</div>
-                <div class="slide">Slide 2.2</div>
-                <div class="slide">Slide 2.3</div>
+            <div class="section" id="perfil">
+                <div>
+                    <h2 class="m-title oleo">Quem Sou Eu?</h2>
+                    <p class="noto">
+                        Sou estudante do Cotuca no último semestre de informática, tenho 17 anos. Gosto de programar fullstack, mas principalmente o front-end.
+                    </p>
+                    <p class="noto">
+                        Espero me tornar um programador experiente e profissional. Quero desenvolver sites e videogames.
+                    </p>                    
+                </div>                
             </div>
-            <div class="section">Section 3</div>
-        </div>
+            <div class="section" id="projetos">
+                <div class="slide" id="slide1">                    
+                        <h2 class="m-title oleo">Projetos e Formação</h2>                    
+                </div>
+                <div class="slide" id="slide2">
+                    <div>
+                        <h2 class="m-title oleo">Snake Game</h2>
+                    </div>
+                </div>
+                <div class="slide" id="slide3"></div>
+            </div>
+            <div class="section" id="sonho">
+                <div class="circle">
+                    <h2 class="m-title oleo">Meu Sonho</h2>
+                    <p class="noto">Meu maior sonho é fazer um jogo tão bom quanto The Legend of Zelda: Breath of The Wild.</p>
+                    <p class="noto">É meu jogo preferido, simplesmente uma obra de arte.</p>
+                </div>
+            </div>
+        </div>        
         
         <script src="jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="fullPage.js-master/src/fullpage.js"></script>
         <script> 
             $(document).ready(function() { $('#fullpage').fullpage(); });
-            new fullpage('#fullpage', {
-              sectionsColor: ['#333333', 'orange', '#C0C0C0', '#ADD8E6'],
+            new fullpage('#fullpage', {                
+                sectionsColor: ['#333333'],
+                navigation: true,
+                naigationPosition: 'right',
+                navigationTooltips: ['Capa','Perfil','Projetos','Sonhos'],
             });
         </script>
     </body>

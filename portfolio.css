@@ -1,4 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP|Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap');
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+body {
+  background: black;
+}
 
 @-webkit-keyframes text-pop-up-top {
   0% {
@@ -34,20 +52,19 @@
   }
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-
 .bounce {
   animation: bounce 2s infinite;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 3vh;
+  left: 50%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+  background-size: contain;
 }
 
 .noto {
@@ -56,6 +73,10 @@
 
 .pacifico{
     font-family: 'Pacifico', cursive;
+}
+
+.oleo {
+    font-family: 'Oleo Script', cursive;
 }
 
 .title {
@@ -84,18 +105,105 @@
 	        animation: text-pop-up-top 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
 }
 
-.arrow
-{
-  position: absolute;
-  bottom: 5vh;
-  left: 50%;
-  margin-left:-20px;
-  width: 40px;
-  height: 40px;
+#perfil{
+    background-image: url(images/dextra-teste.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;    
+}
 
-  /**
-   * Dark Arrow Down
-   */
-  background-image: url(images/downward-arrow1.png);
-  background-size: contain;
+#perfil div {
+    width: 100%;
+    height: 100%;
+    z-index: -9999;
+    background-image: linear-gradient(to left, rgba(255, 135, 135, 0) 15%, rgba(255, 135, 135, 0.6), rgba(255, 135, 135, 1) 60%);    
+    background-position: center;
+}
+
+.m-title {
+    font-size: 5em;
+    text-shadow: 7px 7px 5px rgba(0,0,0, 0.2);
+}
+
+#perfil .m-title{    
+    position: relative;
+    padding: 0;
+    margin: 0;
+    left: 5vw;
+    top: 15vh;
+    display: block;      
+}
+
+#perfil p {
+    font-size: 1.5em;
+    position: relative;
+    display: block;
+    width: 40vw;
+    margin: 0;
+    top: 20vh;
+    margin-top: 7vh;
+    left: 6vw;
+    text-align: left;
+}
+
+#sonho {
+    background-image: url(images/zelda.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sonho div.circle{
+    text-align: center;
+    display: block;
+    width: 600px;
+    height: 600px;
+    padding: 30px;
+    margin-left: 5vw;
+    background-color: #8AFFE1;
+    border-radius: 300px;
+    box-sizing: border-box;
+}
+
+#sonho p{
+    font-size: 1.5em;
+}
+
+#fp-nav{
+    color: white;    
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(64,64,64,1);
+}
+
+#fp-nav ul li a span {
+    background-color: white;
+}
+
+#projetos #slide1{
+    background-color: #54FFB7;
+    text-align: center;
+}
+
+#projetos #slide2{
+    background-color: #B38B32;
+}
+
+#projetos #slide2 div{
+    position: relative;
+    display: block;
+    margin: 0;
+    top: 7vh;
+    left: 5vw;
+}
+
+#projetos #slide3{
+    background-color: #EBE142;
+}
+
+.fp-controlArrow.fp-prev{
+    left: 15px;    
+}
+
+.fp-controlArrow.fp-next{
+    right: 60px;
 }
